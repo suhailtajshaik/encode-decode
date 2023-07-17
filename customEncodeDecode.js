@@ -6,13 +6,13 @@ function encriptCode(number, pad) {
 	return paddedString;
 }
 
-// work in progress
+// work in progress for padNumber
 function decriptCode(encoded, pad) {
 	// let letterCodes = encoded.split(pad);
 
 	const letterCodes = [];
-	for (let i = 0; i < encoded.length; i += pad) {
-		letterCodes.push(+encoded.substring(i, i + pad));
+	for (let i = 0; i < encoded.length; i += 3) {
+		letterCodes.push(+encoded.substring(i, i + 3));
 	}
 	return letterCodes;
 }
